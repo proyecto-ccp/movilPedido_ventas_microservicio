@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Pedidos.Dominio.Entidades;
 using Pedidos.Infraestructura.Repositorios.DetallePedidos;
-using Pedidos.Infraestructura.Repositorios.Pedidos;
 
 namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
 {
@@ -32,6 +31,30 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
             await _context.SaveChangesAsync();
             return entity;
         }
+
+        public async Task ActualizarIdPedido(Guid idUsuario, Guid idPedido)
+        {
+            var _context = GetContext();
+            var entitySet = _context.Set<T>();
+
+            var registros = await entitySet
+            .Where(v => EF.Property<Guid>(v, "IdUsuario") == idUsuario 
+                        &&
+                        EF.Property<Guid>(v, "IdPedido").ToString().Length == 0)
+            .ToListAsync();
+
+            foreach (var registro in registros)
+            {
+                var property = registro.GetType().GetProperty("IdPedido");
+                if (property != null && property.CanWrite)
+                {
+                    property.SetValue(registro, idPedido);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<T> BuscarPorLlave(object ValueKey)
         {
             var _context = GetContext();

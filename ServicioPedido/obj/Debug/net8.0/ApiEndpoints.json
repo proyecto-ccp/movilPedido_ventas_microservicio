@@ -1,6 +1,56 @@
 [
   {
     "ContainingType": "ServicioPedido.Controllers.DetallePedidoController",
+    "Method": "ActualizarDetallesPedido",
+    "RelativePath": "api/DetallePedido/ActualizarDetalles/{idUsuario}/{idPedido}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "idPedido",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Pedidos.Aplicacion.Dto.DetallePedidoOut",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServicioPedido.Controllers.DetallePedidoController",
     "Method": "AgregarDetalle",
     "RelativePath": "api/DetallePedido/AgregarDetalle",
     "HttpMethod": "POST",

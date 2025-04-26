@@ -8,5 +8,6 @@ namespace Pedidos.Dominio.Puertos.Repositorios
         Task<List<DetallePedido>> ObtenerDetallePorPedido(Guid idPedido);
         Task<List<DetallePedido>> ObtenerDetallePorPedidoUsuario(Guid idUsuario);
         Task EliminarDetallePedido(Guid idDetalle);
+        Task ActualizarIdPedido(Guid idUsuario, Guid idPedido);
     }
 }

@@ -123,6 +123,75 @@
         }
       }
     },
+    "/api/DetallePedido/ActualizarDetalles/{idUsuario}/{idPedido}": {
+      "put": {
+        "tags": [
+          "DetallePedido"
+        ],
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "idPedido",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetallePedidoOut"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/DetallePedido/ObtenerDetalles/{idPedido}": {
       "get": {
         "tags": [
@@ -559,6 +628,11 @@
             "type": "string",
             "nullable": true
           },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
           "status": {
             "$ref": "#/components/schemas/HttpStatusCode"
           },
@@ -576,6 +650,11 @@
           },
           "mensaje": {
             "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "status": {
@@ -747,6 +826,11 @@
             "type": "string",
             "nullable": true
           },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
           "status": {
             "$ref": "#/components/schemas/HttpStatusCode"
           },
@@ -764,6 +848,11 @@
           },
           "mensaje": {
             "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "status": {

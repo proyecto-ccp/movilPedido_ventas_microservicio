@@ -63,6 +63,28 @@ namespace ServicioPedido.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("ActualizarDetalles/{idUsuario}/{idPedido}")]
+        [ProducesResponseType(typeof(DetallePedidoOut), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> ActualizarDetallesPedido(Guid idUsuario,Guid idPedido)
+        {
+            try
+            {
+                var resultado = await _comandosDetallePedido.ActualizarIdPedido(idUsuario,idPedido);
+                if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
+                    return Ok(resultado);
+                else
+                    return Problem(resultado.Mensaje, statusCode: (int)resultado.Status, title: resultado.Resultado.ToString(), type: resultado.Resultado.ToString(), instance: HttpContext.Request.Path);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet]
         [Route("ObtenerDetalles/{idPedido}")]
         [ProducesResponseType(typeof(DetallePedidoOutList), StatusCodes.Status200OK)]

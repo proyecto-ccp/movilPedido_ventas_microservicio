@@ -23,6 +23,11 @@ namespace Pedidos.Infraestructura.Repositorios.DetallePedidos
             await _repositorioBaseDetallePedido.Eliminar(idDetalle);
         }
 
+        public async Task ActualizarIdPedido(Guid idUsuario, Guid idPedido)
+        {
+            await _repositorioBaseDetallePedido.ActualizarIdPedido(idUsuario, idPedido);
+        }
+
         public async Task<List<DetallePedido>> ObtenerDetallePorPedido(Guid idPedido)
         {
             return await _repositorioBaseDetallePedido.BuscarPorAtributo(idPedido, "IdPedido");

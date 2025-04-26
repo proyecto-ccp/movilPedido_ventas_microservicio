@@ -12,7 +12,7 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
         private readonly CrearPedido _crearPedido;
         private readonly IMapper _mapper;
 
-        public ComandosPedido(CrearPedido crearPedido, IMapper mapper)
+        public ComandosPedido(CrearPedido crearPedido,IMapper mapper)
         {
             _crearPedido = crearPedido;
             _mapper = mapper;
@@ -27,6 +27,7 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
                 var pedidoDominio = _mapper.Map<Pedido>(pedido);
                 await _crearPedido.Ejecutar(pedidoDominio);
                 baseOut.Mensaje = "Pedido creado exitosamente";
+                baseOut.Id = pedidoDominio.Id;
                 baseOut.Resultado = Resultado.Exitoso;
                 baseOut.Status = HttpStatusCode.Created;
             }

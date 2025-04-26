@@ -6,7 +6,6 @@ namespace Pedidos.Dominio.Servicios.DetallePedidos
     public class CrearDetallePedido(IDetallePedidoRepositorio detallePedidoRepositorio)
     {
         private readonly IDetallePedidoRepositorio _detallePedidoRepositorio = detallePedidoRepositorio;
-
         public async Task<bool> Ejecutar(DetallePedido detallePedido)
         {
             if (ValidarDetalle(detallePedido))
@@ -22,6 +21,7 @@ namespace Pedidos.Dominio.Servicios.DetallePedidos
 
             return true;
         }
+
 
         private bool ValidarDetalle(DetallePedido detallePedido)
         {

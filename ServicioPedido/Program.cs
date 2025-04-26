@@ -42,6 +42,7 @@ builder.Services.AddScoped<IComandosDetallePedido, ComandosDetallePedido>();
 builder.Services.AddScoped<IConsultasDetallePedido, ConsultasDetallePedido>();
 builder.Services.AddScoped<CrearDetallePedido>();
 builder.Services.AddScoped<EliminarDetallePedido>();
+builder.Services.AddScoped<ActualizarIdPedido>();
 builder.Services.AddScoped<ObtenerDetallePedido>();
 builder.Services.AddScoped<ObtenerDetallePedidoUsuario>();
 

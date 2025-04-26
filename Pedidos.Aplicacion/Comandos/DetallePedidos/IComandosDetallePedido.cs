@@ -6,5 +6,6 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
     {
         Task<BaseOut> CrearDetallePedido(DetallePedidoIn detallePedido);
         Task<BaseOut> EliminarDetallePedido(Guid idDetalle);
+        Task<BaseOut> ActualizarIdPedido(Guid idUsuario, Guid idPedido);
     }
 }

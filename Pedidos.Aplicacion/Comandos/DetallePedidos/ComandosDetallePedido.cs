@@ -11,12 +11,14 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
     {
         private readonly CrearDetallePedido _crearDetallePedido;
         private readonly EliminarDetallePedido _eliminarDetallePedido;
+        private readonly ActualizarIdPedido _actualizarIdPedido;
         private readonly IMapper _mapper;
 
-        public ComandosDetallePedido(CrearDetallePedido crearDetallePedido, EliminarDetallePedido eliminarDetallePedido ,IMapper mapper)
+        public ComandosDetallePedido(CrearDetallePedido crearDetallePedido, EliminarDetallePedido eliminarDetallePedido, ActualizarIdPedido actualizarIdPedido ,IMapper mapper)
         {
             _crearDetallePedido = crearDetallePedido;
             _eliminarDetallePedido = eliminarDetallePedido;
+            _actualizarIdPedido = actualizarIdPedido;
             _mapper = mapper;
         }
 
@@ -47,6 +49,26 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
             {
                 await _eliminarDetallePedido.Ejecutar(idDetalle);
                 baseOut.Mensaje = "Detalle retirado exitosamente";
+                baseOut.Resultado = Resultado.Exitoso;
+                baseOut.Status = HttpStatusCode.Created;
+            }
+            catch (Exception ex)
+            {
+                baseOut.Resultado = Resultado.Error;
+                baseOut.Mensaje = ex.Message;
+                baseOut.Status = HttpStatusCode.InternalServerError;
+            }
+
+            return baseOut;
+        }
+
+        public async Task<BaseOut> ActualizarIdPedido(Guid idUsuario, Guid idPedido)
+        {
+            BaseOut baseOut = new();
+            try
+            {
+                await _actualizarIdPedido.Ejecutar(idUsuario, idPedido);
+                baseOut.Mensaje = "Detalles actualizados exitosamente";
                 baseOut.Resultado = Resultado.Exitoso;
                 baseOut.Status = HttpStatusCode.Created;
             }
