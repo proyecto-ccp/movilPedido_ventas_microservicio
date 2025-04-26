@@ -8,6 +8,6 @@ namespace Pedidos.Infraestructura.Repositorios.Pedidos
         public PedidosDBContext(DbContextOptions<PedidosDBContext> options) : base(options)
         {
         }
-        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
     }
 }

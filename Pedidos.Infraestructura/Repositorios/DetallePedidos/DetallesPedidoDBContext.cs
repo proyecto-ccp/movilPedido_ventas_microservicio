@@ -8,7 +8,7 @@ namespace Pedidos.Infraestructura.Repositorios.DetallePedidos
         public DetallesPedidoDBContext(DbContextOptions<DetallesPedidoDBContext> options) : base(options)
         {
         }
-        public DbSet<DetallePedido> DetallesPedidos { get; set; }
+        public DbSet<DetallePedido> DetallePedido { get; set; }
     }
     
 }

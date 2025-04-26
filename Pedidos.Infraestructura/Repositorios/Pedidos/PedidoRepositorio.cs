@@ -25,12 +25,12 @@ namespace Pedidos.Infraestructura.Repositorios.Pedidos
 
         public async Task<List<Pedido>> ObtenerPedidosPorCliente(Guid idCliente, string estado)
         {
-            return await _repositorioBase.BuscarPorAtributo(idCliente, estado);
+            return await _repositorioBase.BuscarPorAtributo(idCliente, "IdCliente");
         }
 
         public async Task<List<Pedido>> ObtenerPedidosPorVendedor(Guid idVendedor, string estado)
         {
-            return await _repositorioBase.BuscarPorAtributo(idVendedor, estado);
+            return await _repositorioBase.BuscarPorAtributo(idVendedor, "IdVendedor");
         }
     }
     

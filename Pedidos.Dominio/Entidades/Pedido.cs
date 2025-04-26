@@ -9,7 +9,7 @@ namespace Pedidos.Dominio.Entidades
         public Guid IdCliente { get; set; }
         
         [Column("fecharealizado", TypeName = "timestamp(6)")]
-        public DateTime FechaRealizado { get; set; }
+        public DateTime? FechaRealizado { get; set; }
 
         [Column("fechaentrega", TypeName = "timestamp(6)")]
         public DateTime FechaEntrega { get; set; }

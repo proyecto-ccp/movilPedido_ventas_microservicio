@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Pedidos.Dominio.Entidades;
+using Pedidos.Infraestructura.Repositorios.DetallePedidos;
 using Pedidos.Infraestructura.Repositorios.Pedidos;
 
 namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
@@ -13,9 +14,9 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
             _serviceProvider = serviceProvider;
         }
 
-        private PedidosDBContext GetContext()
+        private DetallesPedidoDBContext GetContext()
         {
-            return _serviceProvider.GetService<PedidosDBContext>();
+            return _serviceProvider.GetService<DetallesPedidoDBContext>();
         }
 
         protected DbSet<T> GetEntitySet()
@@ -45,12 +46,11 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
         {
             var _context = GetContext();
             var entitySet = _context.Set<T>();
-            var entity = entitySet.FindAsync(ValueKey);
-            
-            entitySet.Remove(entity.Result);
+            var res = await entitySet.FindAsync(ValueKey);
+            entitySet.Remove(res);
             await _context.SaveChangesAsync();
 
-            return entity.Result;
+            return res;
         }
         public async Task<List<T>> BuscarPorAtributo(string ValueAttribute, string Attribute)
         {

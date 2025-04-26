@@ -21,7 +21,6 @@ namespace Pedidos.Aplicacion.Mapeadores
 
             CreateMap<Pedido,PedidoIn>()
                 .ForMember(dest => dest.IdCliente, opt => opt.MapFrom(src => src.IdCliente))
-                .ForMember(dest => dest.FechaRealizado, opt => opt.MapFrom(src => src.FechaRealizado))
                 .ForMember(dest => dest.FechaEntrega, opt => opt.MapFrom(src => src.FechaEntrega))
                 .ForMember(dest => dest.EstadoPedido, opt => opt.MapFrom(src => src.EstadoPedido))
                 .ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(src => src.ValorTotal))
@@ -32,7 +31,6 @@ namespace Pedidos.Aplicacion.Mapeadores
 
             CreateMap<PedidoOut,PedidoIn>()
                 .ForMember(dest => dest.IdCliente, opt => opt.MapFrom(src => src.Pedido.IdCliente))
-                .ForMember(dest => dest.FechaRealizado, opt => opt.MapFrom(src => src.Pedido.FechaRealizado))
                 .ForMember(dest => dest.FechaEntrega, opt => opt.MapFrom(src => src.Pedido.FechaEntrega))
                 .ForMember(dest => dest.EstadoPedido, opt => opt.MapFrom(src => src.Pedido.EstadoPedido))
                 .ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(src => src.Pedido.ValorTotal))

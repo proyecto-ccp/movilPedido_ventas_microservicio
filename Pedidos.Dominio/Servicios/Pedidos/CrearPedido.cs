@@ -13,6 +13,7 @@ namespace Pedidos.Dominio.Servicios.Pedidos
             {
                 pedido.Id = Guid.NewGuid();
                 pedido.EstadoPedido = "CREADO";
+                pedido.FechaEntrega = DateTime.Now;
                 await _pedidoRepositorio.CrearPedido(pedido);
             }
 
