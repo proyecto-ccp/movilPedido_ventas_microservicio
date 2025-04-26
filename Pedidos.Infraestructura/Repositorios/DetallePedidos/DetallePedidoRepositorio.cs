@@ -27,5 +27,10 @@ namespace Pedidos.Infraestructura.Repositorios.DetallePedidos
         {
             return await _repositorioBaseDetallePedido.BuscarPorAtributo(idPedido, "IdPedido");
         }
+
+        public async Task<List<DetallePedido>> ObtenerDetallePorPedidoUsuario(Guid idUsuario)
+        {
+            return await _repositorioBaseDetallePedido.BuscarPorAtributo(idUsuario, "IdUsuario");
+        }
     }
 }

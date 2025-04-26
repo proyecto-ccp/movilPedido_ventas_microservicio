@@ -9,6 +9,7 @@ namespace Pedidos.Aplicacion.Mapeadores
         public PedidoMapeador()
         {
             CreateMap<Pedido,PedidoDto>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.IdCliente, opt => opt.MapFrom(src => src.IdCliente))
                 .ForMember(dest => dest.FechaRealizado, opt => opt.MapFrom(src => src.FechaRealizado))
                 .ForMember(dest => dest.FechaEntrega, opt => opt.MapFrom(src => src.FechaEntrega))

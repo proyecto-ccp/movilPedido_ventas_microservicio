@@ -135,6 +135,51 @@
     ]
   },
   {
+    "ContainingType": "ServicioPedido.Controllers.DetallePedidoController",
+    "Method": "ObtenerDetallesUsuario",
+    "RelativePath": "api/DetallePedido/ObtenerDetallesUsuario/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Pedidos.Aplicacion.Dto.DetallePedidoOutList",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
     "ContainingType": "ServicioPedido.Controllers.PedidoController",
     "Method": "CrearPedido",
     "RelativePath": "api/Pedido/CrearPedido",

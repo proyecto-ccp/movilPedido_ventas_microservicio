@@ -1,7 +1,14 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7ACB5777-72AB-419A-A525-9DA77FF4F4CB}|..\\Pedidos.Infraestructura\\Pedidos.Infraestructura.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.infraestructura\\repositoriosgenericos\\detallepedidos\\repositoriobasedetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E5D038A-AB46-42F2-BE79-A42CCA40B7FD}|..\\Pedidos.Dominio\\Pedidos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.dominio\\entidades\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +16,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e3fb24c2-2e84-3146-a5f8-bc25bbc68f8a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T20:55:32.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepositorioBaseDetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwEMAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T20:44:29.33Z",
+              "EditorCaption": ""
             }
           ]
         }

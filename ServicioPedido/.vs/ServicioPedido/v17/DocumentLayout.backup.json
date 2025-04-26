@@ -3,21 +3,10 @@
   "WorkspaceRootPath": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\serviciopedido\\controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|solutionrelative:controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7ACB5777-72AB-419A-A525-9DA77FF4F4CB}|..\\Pedidos.Infraestructura\\Pedidos.Infraestructura.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.infraestructura\\repositoriosgenericos\\detallepedidos\\repositoriobasedetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7ACB5777-72AB-419A-A525-9DA77FF4F4CB}|..\\Pedidos.Infraestructura\\Pedidos.Infraestructura.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.infraestructura\\repositoriosgenericos\\pedidos\\repositoriobasepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7ACB5777-72AB-419A-A525-9DA77FF4F4CB}|..\\Pedidos.Infraestructura\\Pedidos.Infraestructura.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.infraestructura\\repositorios\\pedidos\\pedidorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\serviciopedido\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E5D038A-AB46-42F2-BE79-A42CCA40B7FD}|..\\Pedidos.Dominio\\Pedidos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.dominio\\servicios\\pedidos\\crearpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E5D038A-AB46-42F2-BE79-A42CCA40B7FD}|..\\Pedidos.Dominio\\Pedidos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.dominio\\entidades\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +24,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PedidoRepositorio.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\Repositorios\\Pedidos\\PedidoRepositorio.cs",
-              "RelativeDocumentMoniker": "..\\Pedidos.Infraestructura\\Repositorios\\Pedidos\\PedidoRepositorio.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\Repositorios\\Pedidos\\PedidoRepositorio.cs",
-              "RelativeToolTip": "..\\Pedidos.Infraestructura\\Repositorios\\Pedidos\\PedidoRepositorio.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowBsAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Dominio\\Entidades\\DetallePedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:14:25.986Z",
+              "WhenOpened": "2025-04-26T20:55:32.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DetallePedidoController.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\DetallePedidoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DetallePedidoController.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\DetallePedidoController.cs",
-              "RelativeToolTip": "Controllers\\DetallePedidoController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAUwEsAAAAbAAAAAAAAAA==",
+              "Title": "RepositorioBaseDetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\DetallePedidos\\RepositorioBaseDetallePedido.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwEMAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:01:06.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RepositorioBasePedido.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\Pedidos\\RepositorioBasePedido.cs",
-              "RelativeDocumentMoniker": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\Pedidos\\RepositorioBasePedido.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Infraestructura\\RepositoriosGenericos\\Pedidos\\RepositorioBasePedido.cs",
-              "RelativeToolTip": "..\\Pedidos.Infraestructura\\RepositoriosGenericos\\Pedidos\\RepositorioBasePedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:01:06.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CrearPedido.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Servicios\\Pedidos\\CrearPedido.cs",
-              "RelativeDocumentMoniker": "..\\Pedidos.Dominio\\Servicios\\Pedidos\\CrearPedido.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Dominio\\Servicios\\Pedidos\\CrearPedido.cs",
-              "RelativeToolTip": "..\\Pedidos.Dominio\\Servicios\\Pedidos\\CrearPedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:06:32.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PedidoController.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\PedidoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\PedidoController.cs",
-              "RelativeToolTip": "Controllers\\PedidoController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGMAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:23:39.747Z",
+              "WhenOpened": "2025-04-26T20:44:29.33Z",
               "EditorCaption": ""
             }
           ]
