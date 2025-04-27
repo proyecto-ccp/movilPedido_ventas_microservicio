@@ -84,13 +84,26 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos
             return res;
         }
 
-        public async Task<List<T>> BuscarPorAtributo(Guid ValueAttribute, string Attribute)
+        public async Task<List<T>> BuscarPorAtributo(Guid ValueAttribute, string Attribute, int usuario=0)
         {
             var _context = GetContext();
             var entitySet = _context.Set<T>();
-            var res = await entitySet.Where(v => EF.Property<Guid>(v, Attribute) == ValueAttribute).ToListAsync();
-            await _context.DisposeAsync();
-            return res;
+
+            if (usuario != 0)
+            {
+                var res = await entitySet.Where(v => EF.Property<Guid>(v, Attribute) == ValueAttribute
+                                                    &&
+                                                    EF.Property<Guid>(v, "IdPedido").ToString().Length == 0).ToListAsync();
+                await _context.DisposeAsync();
+                return res;
+            }
+            else
+            {
+                var res = await entitySet.Where(v => EF.Property<Guid>(v, Attribute) == ValueAttribute).ToListAsync();
+                await _context.DisposeAsync();
+                return res;
+            }
+            
         }
 
         public async Task<List<T>> DarListado()
