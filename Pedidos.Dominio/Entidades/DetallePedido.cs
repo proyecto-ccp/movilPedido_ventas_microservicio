@@ -15,6 +15,15 @@ namespace Pedidos.Dominio.Entidades
         [Column("idproducto")]
         public int IdProducto { get; set; }
 
+        [NotMapped]
+        public string NombreProducto { get; set; } = string.Empty;
+
+        [NotMapped]
+        public string UrlFotoProducto1 { get; set; } = string.Empty;
+
+        [NotMapped]
+        public string UrlFotoProducto2 { get; set; } = string.Empty;
+
         [Column("cantidad")]
         public int Cantidad { get; set; }
 

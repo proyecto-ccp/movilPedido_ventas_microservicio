@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\consultas\\detallepedidos\\consultasdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\clientes\\iproductosapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\comandos\\detallepedidos\\comandosdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\clientes\\inventariosapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\serviciopedido\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ConsultasDetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Consultas\\DetallePedidos\\ConsultasDetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Consultas\\DetallePedidos\\ConsultasDetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Consultas\\DetallePedidos\\ConsultasDetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Consultas\\DetallePedidos\\ConsultasDetallePedido.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:57:06.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComandosDetallePedido.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Comandos\\DetallePedidos\\ComandosDetallePedido.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Comandos\\DetallePedidos\\ComandosDetallePedido.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Comandos\\DetallePedidos\\ComandosDetallePedido.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Comandos\\DetallePedidos\\ComandosDetallePedido.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:55:18.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventariosApiClient.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Clientes\\InventariosApiClient.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Clientes\\InventariosApiClient.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Clientes\\InventariosApiClient.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Clientes\\InventariosApiClient.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:37:39.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProductosApiClient.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Clientes\\IProductosApiClient.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Clientes\\IProductosApiClient.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Clientes\\IProductosApiClient.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Clientes\\IProductosApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwB4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:37:34.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADgAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T19:51:41.237Z",
               "EditorCaption": ""

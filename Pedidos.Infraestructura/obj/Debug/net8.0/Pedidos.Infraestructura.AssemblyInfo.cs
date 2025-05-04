@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pedidos.Infraestructura")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26d58dadc52f01f3a5e6431455eb75002e9c7f8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a48c9c6a85dbf8aeba615c26c483451a6ae86528")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pedidos.Infraestructura")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pedidos.Infraestructura")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

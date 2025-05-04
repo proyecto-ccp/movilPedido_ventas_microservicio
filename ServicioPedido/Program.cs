@@ -52,6 +52,11 @@ builder.Services.AddHttpClient<IInventariosApiClient, InventariosApiClient>(clie
     client.BaseAddress = new Uri("https://inventarios-596275467600.us-central1.run.app/");
 });
 
+builder.Services.AddHttpClient<IProductosApiClient, ProductosApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https://productos-596275467600.us-central1.run.app/");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

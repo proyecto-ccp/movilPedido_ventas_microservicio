@@ -592,6 +592,18 @@
           "precioUnitario": {
             "type": "number",
             "format": "double"
+          },
+          "nombreProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "urlFotoProducto1": {
+            "type": "string",
+            "nullable": true
+          },
+          "urlFotoProducto2": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

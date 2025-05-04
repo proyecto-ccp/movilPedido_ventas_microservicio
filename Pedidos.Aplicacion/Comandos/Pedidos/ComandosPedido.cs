@@ -12,7 +12,6 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
     {
         private readonly CrearPedido _crearPedido;
         private readonly IMapper _mapper;
-
         public ComandosPedido(CrearPedido crearPedido,IMapper mapper)
         {
             _crearPedido = crearPedido;
