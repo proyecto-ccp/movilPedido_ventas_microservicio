@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Pedidos.Aplicacion.Clientes;
 using Pedidos.Aplicacion.Comandos.DetallePedidos;
 using Pedidos.Aplicacion.Comandos.Pedidos;
 using Pedidos.Aplicacion.Consultas.DetallePedidos;
@@ -46,6 +47,10 @@ builder.Services.AddScoped<ActualizarIdPedido>();
 builder.Services.AddScoped<ObtenerDetallePedido>();
 builder.Services.AddScoped<ObtenerDetallePedidoUsuario>();
 
+builder.Services.AddHttpClient<IInventariosApiClient, InventariosApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https://inventarios-596275467600.us-central1.run.app/");
+});
 
 var app = builder.Build();
 

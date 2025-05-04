@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Pedidos.Aplicacion.Clientes;
 using Pedidos.Aplicacion.Dto;
 using Pedidos.Aplicacion.Enum;
 using Pedidos.Dominio.Entidades;
