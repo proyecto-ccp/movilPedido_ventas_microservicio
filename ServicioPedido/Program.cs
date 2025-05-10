@@ -30,9 +30,11 @@ builder.Services.AddTransient<IPedidoRepositorio, PedidoRepositorio>();
 builder.Services.AddScoped<IComandosPedido, ComandosPedido>();
 builder.Services.AddScoped<IConsultasPedidos, ConsultasPedidos>();
 builder.Services.AddScoped<CrearPedido>();
+builder.Services.AddScoped<ActualizarPedido>();
 builder.Services.AddScoped<ObtenerPedido>();
 builder.Services.AddScoped<ListadoPedidosPorCliente>();
 builder.Services.AddScoped<ListadoPedidosPorVendedor>();
+builder.Services.AddScoped<ListadoPedidosPorEntregar>();
 
 //DetallePedidos
 builder.Services.AddDbContext<DetallesPedidoDBContext>(options =>
@@ -60,11 +62,11 @@ builder.Services.AddHttpClient<IProductosApiClient, ProductosApiClient>(client =
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+/*if (app.Environment.IsDevelopment())
+{*/
+app.UseSwagger();
+app.UseSwaggerUI();
+/*}*/
 
 app.UseHttpsRedirection();
 

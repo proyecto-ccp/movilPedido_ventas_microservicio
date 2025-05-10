@@ -7,5 +7,6 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
         public Task<PedidoOut> ObtenerPedidoPorId(Guid id);
         public Task<PedidoOutList> ObtenerPedidosPorClienteId(Guid clienteId, string estado);
         public Task<PedidoOutList> ObtenerPedidosPorVendedorId(Guid vendedorId, string estado);
+        public Task<PedidoOutList> ObtenerPedidosPorEstado(string estado);
     }
 }

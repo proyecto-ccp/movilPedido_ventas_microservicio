@@ -18,6 +18,11 @@ namespace Pedidos.Infraestructura.Repositorios.Pedidos
             await _repositorioBase.Crear(pedido);
         }
 
+        public async Task ActualizarPedido(Pedido pedido)
+        {
+            await _repositorioBase.Actualizar(pedido);
+        }
+
         public async Task<Pedido> ObtenerPedido(Guid id)
         {
             return await _repositorioBase.BuscarPorLlave(id);
@@ -31,6 +36,11 @@ namespace Pedidos.Infraestructura.Repositorios.Pedidos
         public async Task<List<Pedido>> ObtenerPedidosPorVendedor(Guid idVendedor, string estado)
         {
             return await _repositorioBase.BuscarPorAtributo(idVendedor, "IdVendedor");
+        }
+
+        public async Task<List<Pedido>> ObtenerPedidosPorEntrega(string strEstado)
+        {
+            return await _repositorioBase.BuscarPendientePorEntregar(strEstado);
         }
     }
     

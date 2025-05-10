@@ -31,6 +31,15 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.Pedidos
             await _context.SaveChangesAsync();
             return entity;
         }
+
+        public async Task<T> Actualizar(T entity)
+        {
+            var _context = GetContext();
+            var entitySet = _context.Set<T>();
+            var res = entitySet.Update(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
         public async Task<T> BuscarPorLlave(object ValueKey)
         {
             var _context = GetContext();
@@ -40,7 +49,6 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.Pedidos
             return res;
 
         }
-
         public async Task<List<T>> BuscarPorAtributo(string ValueAttribute, string Attribute)
         {
             var _context = GetContext();
@@ -58,12 +66,20 @@ namespace Pedidos.Infraestructura.RepositoriosGenericos.Pedidos
             await _context.DisposeAsync();
             return res;
         }
-
         public async Task<List<T>> DarListado()
         {
             var _context = GetContext();
             var entitySet = _context.Set<T>();
             var res = await entitySet.ToListAsync();
+            await _context.DisposeAsync();
+            return res;
+        }
+
+        public async Task<List<T>> BuscarPendientePorEntregar(string strEstado)
+        {
+            var _context = GetContext();
+            var entitySet = _context.Set<T>();
+            var res = await entitySet.Where(v => EF.Property<string>(v, "EstadoPedido") == strEstado).ToListAsync();
             await _context.DisposeAsync();
             return res;
         }

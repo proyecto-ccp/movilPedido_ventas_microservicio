@@ -43,6 +43,29 @@ namespace ServicioPedido.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("ActualizarPedido/{id}")]
+        [ProducesResponseType(typeof(PedidoOut), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> ActualizarPedido(Guid id, [FromBody] PedidoActualizarIn PedidoIn)
+        {
+            try
+            {
+                PedidoIn.Id = id;
+                var resultado = await _comandosPedido.ActualizarPedido(PedidoIn);
+                if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
+                    return Ok(resultado);
+                else
+                    return Problem(resultado.Mensaje, statusCode: (int)resultado.Status, title: resultado.Resultado.ToString(), type: resultado.Resultado.ToString(), instance: HttpContext.Request.Path);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet]
         [Route("ObtenerPedido/{id}")]
         [ProducesResponseType(typeof(PedidoOut), StatusCodes.Status200OK)]
@@ -98,6 +121,28 @@ namespace ServicioPedido.Controllers
             try
             {
                 var resultado = await _consultasPedidos.ObtenerPedidosPorClienteId(idCliente, estado);
+                if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
+                    return Ok(resultado);
+                else
+                    return Problem(resultado.Mensaje, statusCode: (int)resultado.Status, title: resultado.Resultado.ToString(), type: resultado.Resultado.ToString(), instance: HttpContext.Request.Path);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("ObtenerPedidosPorEstado/{estado}")]
+        [ProducesResponseType(typeof(PedidoOutList), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> ObtenerPedidosPorEstado(string estado)
+        {
+            try
+            {
+                var resultado = await _consultasPedidos.ObtenerPedidosPorEstado(estado);
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);
                 else

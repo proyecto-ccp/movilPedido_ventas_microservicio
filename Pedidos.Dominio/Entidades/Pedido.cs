@@ -8,10 +8,10 @@ namespace Pedidos.Dominio.Entidades
         [Column("idcliente")]
         public Guid IdCliente { get; set; }
         
-        [Column("fecharealizado", TypeName = "timestamp(6)")]
+        [Column("fecharealizado")]
         public DateTime? FechaRealizado { get; set; }
 
-        [Column("fechaentrega", TypeName = "timestamp(6)")]
+        [Column("fechaentrega")]
         public DateTime FechaEntrega { get; set; }
 
         [Column("estadopedido")]

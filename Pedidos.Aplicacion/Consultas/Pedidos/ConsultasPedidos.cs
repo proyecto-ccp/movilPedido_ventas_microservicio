@@ -12,12 +12,14 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
         private readonly ObtenerPedido _obtenerPedido;
         private readonly ListadoPedidosPorCliente _listadoPedidosPorCliente;
         private readonly ListadoPedidosPorVendedor _listadoPedidosPorVendedor;
+        private readonly ListadoPedidosPorEntregar _listadoPedidosPorEstado;
         private readonly IMapper _mapper;
         public ConsultasPedidos(IPedidoRepositorio pedidoRepositorio, IMapper mapper)
         {
             _obtenerPedido = new ObtenerPedido(pedidoRepositorio);
             _listadoPedidosPorCliente = new ListadoPedidosPorCliente(pedidoRepositorio);
             _listadoPedidosPorVendedor = new ListadoPedidosPorVendedor(pedidoRepositorio);
+            _listadoPedidosPorEstado = new ListadoPedidosPorEntregar(pedidoRepositorio);
             _mapper = mapper;
         }
 
@@ -119,6 +121,38 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
                 output.Status = HttpStatusCode.InternalServerError;
             }
 
+            return output;
+        }
+
+        public async Task<PedidoOutList> ObtenerPedidosPorEstado(string estado)
+        {
+            PedidoOutList output = new()
+            {
+                Pedidos = []
+            };
+            try
+            {
+                var Pedidos = await _listadoPedidosPorEstado.ObtenerPedidosPorEntregar(estado);
+                if (Pedidos == null || Pedidos.Count == 0)
+                {
+                    output.Resultado = Resultado.SinRegistros;
+                    output.Mensaje = "No se encontraron pedidos";
+                    output.Status = HttpStatusCode.NoContent;
+                }
+                else
+                {
+                    output.Resultado = Resultado.Exitoso;
+                    output.Mensaje = "Pedidos encontrados";
+                    output.Status = HttpStatusCode.OK;
+                    output.Pedidos = _mapper.Map<List<PedidoDto>>(Pedidos);
+                }
+            }
+            catch (Exception ex)
+            {
+                output.Resultado = Resultado.Error;
+                output.Mensaje = ex.Message;
+                output.Status = HttpStatusCode.InternalServerError;
+            }
             return output;
         }
     }

@@ -11,10 +11,12 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
     public class ComandosPedido: IComandosPedido
     {
         private readonly CrearPedido _crearPedido;
+        private readonly ActualizarPedido _actualizarPedido;
         private readonly IMapper _mapper;
-        public ComandosPedido(CrearPedido crearPedido,IMapper mapper)
+        public ComandosPedido(CrearPedido crearPedido, ActualizarPedido actualizarPedido,IMapper mapper)
         {
             _crearPedido = crearPedido;
+            _actualizarPedido = actualizarPedido;
             _mapper = mapper;
         }
 
@@ -38,6 +40,27 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
                 baseOut.Status = HttpStatusCode.InternalServerError;
             }
 
+            return baseOut;
+        }
+
+        public async Task<BaseOut> ActualizarPedido(PedidoActualizarIn pedido)
+        {
+            BaseOut baseOut = new();
+            try
+            {
+                var pedidoDominio = _mapper.Map<Pedido>(pedido);
+                await _actualizarPedido.Ejecutar(pedidoDominio);
+                baseOut.Mensaje = "Pedido actualizado exitosamente";
+                baseOut.Id = pedidoDominio.Id;
+                baseOut.Resultado = Resultado.Exitoso;
+                baseOut.Status = HttpStatusCode.OK;
+            }
+            catch (Exception ex)
+            {
+                baseOut.Resultado = Resultado.Error;
+                baseOut.Mensaje = ex.Message;
+                baseOut.Status = HttpStatusCode.InternalServerError;
+            }
             return baseOut;
         }
     }
