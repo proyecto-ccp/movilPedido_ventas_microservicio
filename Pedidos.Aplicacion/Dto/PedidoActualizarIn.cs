@@ -4,7 +4,6 @@ namespace Pedidos.Aplicacion.Dto
 {
     public class PedidoActualizarIn
     {
-        public Guid Id { get; set; }
         public Guid IdCliente { get; set; }
         public DateTime FechaEntrega { get; set; }
         public DateTime FechaRealizado { get; set; }

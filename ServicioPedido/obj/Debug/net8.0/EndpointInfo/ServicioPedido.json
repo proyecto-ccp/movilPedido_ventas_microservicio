@@ -880,10 +880,6 @@
       "PedidoActualizarIn": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
           "idCliente": {
             "type": "string",
             "format": "uuid"

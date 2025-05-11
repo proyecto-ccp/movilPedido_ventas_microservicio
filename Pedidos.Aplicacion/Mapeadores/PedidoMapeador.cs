@@ -31,7 +31,6 @@ namespace Pedidos.Aplicacion.Mapeadores
                 .ReverseMap();
 
             CreateMap<Pedido, PedidoActualizarIn>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.IdCliente, opt => opt.MapFrom(src => src.IdCliente))
                 .ForMember(dest => dest.FechaEntrega, opt => opt.MapFrom(src => src.FechaEntrega))
                 .ForMember(dest => dest.FechaRealizado, opt => opt.MapFrom(src => src.FechaRealizado))

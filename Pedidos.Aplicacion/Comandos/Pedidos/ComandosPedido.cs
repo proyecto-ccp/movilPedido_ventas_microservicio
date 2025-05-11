@@ -43,12 +43,13 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
             return baseOut;
         }
 
-        public async Task<BaseOut> ActualizarPedido(PedidoActualizarIn pedido)
+        public async Task<BaseOut> ActualizarPedido(PedidoActualizarIn pedido, Guid id)
         {
             BaseOut baseOut = new();
             try
             {
                 var pedidoDominio = _mapper.Map<Pedido>(pedido);
+                pedidoDominio.Id = id;
                 await _actualizarPedido.Ejecutar(pedidoDominio);
                 baseOut.Mensaje = "Pedido actualizado exitosamente";
                 baseOut.Id = pedidoDominio.Id;

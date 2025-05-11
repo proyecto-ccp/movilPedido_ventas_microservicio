@@ -53,8 +53,7 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                PedidoIn.Id = id;
-                var resultado = await _comandosPedido.ActualizarPedido(PedidoIn);
+                var resultado = await _comandosPedido.ActualizarPedido(PedidoIn,id);
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);
                 else
