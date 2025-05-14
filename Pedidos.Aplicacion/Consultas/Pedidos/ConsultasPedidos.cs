@@ -34,7 +34,7 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
                 {
                     PedidoOut.Resultado = Resultado.SinRegistros;
                     PedidoOut.Mensaje = "Pedido NO encontrado";
-                    PedidoOut.Status = HttpStatusCode.NoContent;
+                    PedidoOut.Status = HttpStatusCode.NotFound;
                 }
                 else
                 {

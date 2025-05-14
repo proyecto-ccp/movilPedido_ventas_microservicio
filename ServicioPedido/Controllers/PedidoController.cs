@@ -76,7 +76,7 @@ namespace ServicioPedido.Controllers
             try
             {
                 var resultado = await _consultasPedidos.ObtenerPedidoPorId(id);
-                if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
+                if (resultado.Resultado == Pedidos.Aplicacion.Enum.Resultado.Exitoso)
                     return Ok(resultado);
                 else
                     return Problem(resultado.Mensaje, statusCode: (int)resultado.Status, title: resultado.Resultado.ToString(), type: resultado.Resultado.ToString(), instance: HttpContext.Request.Path);

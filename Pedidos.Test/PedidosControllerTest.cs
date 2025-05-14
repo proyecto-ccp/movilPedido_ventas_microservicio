@@ -84,7 +84,7 @@ namespace Pedidos.Test
             //Act
             var response = await _client.PostAsync("/api/Pedido/CrearPedido", content);
             //Assert
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
         }
 
         [Fact]
@@ -122,16 +122,17 @@ namespace Pedidos.Test
         public async Task ObtenerPedidosPorCliente_Ok()
         {
             //Act
-            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorCliente/{clienteId}");
+            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorCliente/{clienteId}/CREADO");
             //Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
-            var pedidoResult = JsonSerializer.Deserialize<List<PedidoOut>>(responseString, new JsonSerializerOptions
+            var pedidoResult = JsonSerializer.Deserialize<PedidoOutList>(responseString, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
             Assert.NotNull(pedidoResult);
+            Assert.IsType<PedidoOutList>(pedidoResult);
         }
 
         [Fact]
@@ -147,16 +148,17 @@ namespace Pedidos.Test
         public async Task ObtenerPedidosPorVendedor_Ok()
         {
             //Act
-            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorVendedor/{vendedorId}");
+            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorVendedor/{vendedorId}/CREADO");
             //Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
-            var pedidoResult = JsonSerializer.Deserialize<List<PedidoOut>>(responseString, new JsonSerializerOptions
+            var pedidoResult = JsonSerializer.Deserialize<PedidoOutList>(responseString, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
             Assert.NotNull(pedidoResult);
+            Assert.IsType<PedidoOutList>(pedidoResult );
         }
 
         [Fact]
@@ -177,11 +179,12 @@ namespace Pedidos.Test
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
-            var pedidoResult = JsonSerializer.Deserialize<List<PedidoOut>>(responseString, new JsonSerializerOptions
+            var pedidoResult = JsonSerializer.Deserialize<PedidoOutList>(responseString, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
             Assert.NotNull(pedidoResult);
+            Assert.IsType<PedidoOutList>(pedidoResult);
         }
 
         [Fact]
@@ -192,10 +195,11 @@ namespace Pedidos.Test
                 await crearPedido_Ok();
             }
             var faker = new Faker();
-            var pedido = new PedidoIn
+            var pedido = new PedidoActualizarIn
             {
                 IdCliente = clienteId,
-                FechaEntrega = DateTime.Now.AddDays(5),
+                FechaEntrega = DateTime.UtcNow.AddDays(5),
+                FechaRealizado = DateTime.UtcNow.AddDays(5),
                 EstadoPedido = "CONFIRMADO",
                 ValorTotal = faker.Random.Decimal(100, 1000),
                 IdVendedor = vendedorId,

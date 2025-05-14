@@ -10,16 +10,8 @@ namespace Pedidos.Dominio.Servicios.Pedidos
 
         public async Task<Pedido> ObtenerPedidoPorId(Guid id)
         {
-            var pedido = await _pedidoRepositorio.ObtenerPedido(id);
-
-            if(pedido==null)
-            {
-                throw new Exception("Pedido no encontrado");
-            }
-            else
-            {
-                return pedido;
-            }
+            var pedido = await _pedidoRepositorio.ObtenerPedido(id);            
+            return pedido;
         }
     }
 }
