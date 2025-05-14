@@ -4,6 +4,7 @@ using Pedidos.Aplicacion.Dto;
 using Pedidos.Aplicacion.Enum;
 using Pedidos.Dominio.Entidades;
 using Pedidos.Dominio.Servicios.DetallePedidos;
+using Pedidos.Dominio.Servicios.Pedidos;
 using System.Net;
 
 namespace Pedidos.Aplicacion.Comandos.DetallePedidos
@@ -16,8 +17,10 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
         private readonly ObtenerDetallePedido _obtenerDetallePedido;
         private readonly IMapper _mapper;
         private readonly IInventariosApiClient _inventariosApiClient;
+        private readonly ActualizarPedido _actualizarPedido;
+        private readonly ObtenerPedido _obtenerPedido;
 
-        public ComandosDetallePedido(CrearDetallePedido crearDetallePedido, EliminarDetallePedido eliminarDetallePedido, ActualizarIdPedido actualizarIdPedido ,IMapper mapper, IInventariosApiClient inventariosApiClient, ObtenerDetallePedido obtenerDetallePedido)
+        public ComandosDetallePedido(CrearDetallePedido crearDetallePedido, EliminarDetallePedido eliminarDetallePedido, ActualizarIdPedido actualizarIdPedido ,IMapper mapper, IInventariosApiClient inventariosApiClient, ObtenerDetallePedido obtenerDetallePedido, ActualizarPedido actualizarPedido, ObtenerPedido obtenerPedido)
         {
             _crearDetallePedido = crearDetallePedido;
             _eliminarDetallePedido = eliminarDetallePedido;
@@ -25,6 +28,8 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
             _mapper = mapper;
             _inventariosApiClient = inventariosApiClient;
             _obtenerDetallePedido = obtenerDetallePedido;
+            _actualizarPedido = actualizarPedido;
+            _obtenerPedido = obtenerPedido;
         }
 
         public async Task<BaseOut> CrearDetallePedido(DetallePedidoIn detallePedido)
@@ -73,9 +78,6 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
             try
             {
                 await _actualizarIdPedido.Ejecutar(idUsuario, idPedido);
-                baseOut.Mensaje = "Detalles actualizados exitosamente";
-                baseOut.Resultado = Resultado.Exitoso;
-                baseOut.Status = HttpStatusCode.Created;
 
                 var response = await _obtenerDetallePedido.ObtenerDetallePorPedido(idPedido);
                 if (response != null && response.Count > 0)
@@ -92,7 +94,18 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
                             return baseOut;
                         }
                     }
+
+                    var pedido = await _obtenerPedido.ObtenerPedidoPorId(idPedido);
+                    if (pedido != null)
+                    {
+                        pedido.EstadoPedido = "CONFIRMADO";
+                        await _actualizarPedido.Ejecutar(pedido);
+                    }
                 }
+
+                baseOut.Mensaje = "Detalles actualizados exitosamente";
+                baseOut.Resultado = Resultado.Exitoso;
+                baseOut.Status = HttpStatusCode.Created;
             }
             catch (Exception ex)
             {
