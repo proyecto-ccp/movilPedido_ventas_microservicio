@@ -139,7 +139,7 @@ namespace Pedidos.Test
         public async Task ObtenerPedidosPorCliente_NotFound()
         {
             //Act
-            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorCliente/{Guid.NewGuid()}");
+            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorCliente/{Guid.NewGuid()}/CREADO");
             //Assert
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
@@ -165,7 +165,7 @@ namespace Pedidos.Test
         public async Task ObtenerPedidosPorVendedor_NotFound()
         {
             //Act
-            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorVendedor/{Guid.NewGuid()}");
+            var response = await _client.GetAsync($"/api/Pedido/ObtenerPedidosPorVendedor/{Guid.NewGuid()}/CREADO");
             //Assert
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }

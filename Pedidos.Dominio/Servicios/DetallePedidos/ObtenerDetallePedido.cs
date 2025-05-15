@@ -11,15 +11,15 @@ namespace Pedidos.Dominio.Servicios.DetallePedidos
         {
             var detallePedido = await _detallePedidoRepositorio.ObtenerDetallePorPedido(idPedido);
             
-            if (detallePedido == null)
-            {
-                throw new Exception("No se encontró el detalle del pedido.");
-            }
+            //if (detallePedido == null)
+            //{
+            //    throw new Exception("No se encontró el detalle del pedido.");
+            //}
 
-            if (detallePedido.Count == 0)
-            {
-                throw new Exception("No se encontraron detalles para el pedido.");
-            }
+            //if (detallePedido.Count == 0)
+            //{
+            //    throw new Exception("No se encontraron detalles para el pedido.");
+            //}
 
             return detallePedido;
         }

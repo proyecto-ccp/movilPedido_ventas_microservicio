@@ -213,42 +213,42 @@ var assemblies = [
   {
     "name": "Pedidos.Aplicacion",
     "classes": [
-      { "name": "Pedidos.Aplicacion.Clientes.InventariosApiClient", "rp": "Pedidos.Aplicacion_InventariosApiClient.html", "cl": 0, "ucl": 32, "cal": 32, "tl": 63, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Clientes.ProductosApiClient", "rp": "Pedidos.Aplicacion_ProductosApiClient.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 40, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Comandos.DetallePedidos.ComandosDetallePedido", "rp": "Pedidos.Aplicacion_ComandosDetallePedido.html", "cl": 0, "ucl": 80, "cal": 80, "tl": 120, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Clientes.InventariosApiClient", "rp": "Pedidos.Aplicacion_InventariosApiClient.html", "cl": 26, "ucl": 16, "cal": 42, "tl": 66, "cb": 4, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Clientes.ProductosApiClient", "rp": "Pedidos.Aplicacion_ProductosApiClient.html", "cl": 14, "ucl": 3, "cal": 17, "tl": 40, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Comandos.DetallePedidos.ComandosDetallePedido", "rp": "Pedidos.Aplicacion_ComandosDetallePedido.html", "cl": 70, "ucl": 23, "cal": 93, "tl": 121, "cb": 8, "tb": 20, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Comandos.Pedidos.ComandosPedido", "rp": "Pedidos.Aplicacion_ComandosPedido.html", "cl": 37, "ucl": 6, "cal": 43, "tl": 68, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Consultas.DetallePedidos.ConsultasDetallePedido", "rp": "Pedidos.Aplicacion_ConsultasDetallePedido.html", "cl": 0, "ucl": 83, "cal": 83, "tl": 121, "cb": 0, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Consultas.Pedidos.ConsultasPedidos", "rp": "Pedidos.Aplicacion_ConsultasPedidos.html", "cl": 78, "ucl": 39, "cal": 117, "tl": 159, "cb": 10, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Consultas.DetallePedidos.ConsultasDetallePedido", "rp": "Pedidos.Aplicacion_ConsultasDetallePedido.html", "cl": 66, "ucl": 17, "cal": 83, "tl": 121, "cb": 13, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Consultas.Pedidos.ConsultasPedidos", "rp": "Pedidos.Aplicacion_ConsultasPedidos.html", "cl": 88, "ucl": 29, "cal": 117, "tl": 159, "cb": 12, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.BaseOut", "rp": "Pedidos.Aplicacion_BaseOut.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoDto", "rp": "Pedidos.Aplicacion_DetallePedidoDto.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoIn", "rp": "Pedidos.Aplicacion_DetallePedidoIn.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoDto", "rp": "Pedidos.Aplicacion_DetallePedidoDto.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoIn", "rp": "Pedidos.Aplicacion_DetallePedidoIn.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.DetallePedidoOut", "rp": "Pedidos.Aplicacion_DetallePedidoOut.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoOutList", "rp": "Pedidos.Aplicacion_DetallePedidoOutList.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.Inventario", "rp": "Pedidos.Aplicacion_Inventario.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.InventarioDto", "rp": "Pedidos.Aplicacion_InventarioDto.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.InventarioResponseDto", "rp": "Pedidos.Aplicacion_InventarioResponseDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.DetallePedidoOutList", "rp": "Pedidos.Aplicacion_DetallePedidoOutList.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.Inventario", "rp": "Pedidos.Aplicacion_Inventario.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.InventarioDto", "rp": "Pedidos.Aplicacion_InventarioDto.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.InventarioResponseDto", "rp": "Pedidos.Aplicacion_InventarioResponseDto.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.PedidoActualizarIn", "rp": "Pedidos.Aplicacion_PedidoActualizarIn.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.PedidoDto", "rp": "Pedidos.Aplicacion_PedidoDto.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.PedidoIn", "rp": "Pedidos.Aplicacion_PedidoIn.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.PedidoOut", "rp": "Pedidos.Aplicacion_PedidoOut.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.PedidoOutList", "rp": "Pedidos.Aplicacion_PedidoOutList.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Dto.Producto", "rp": "Pedidos.Aplicacion_Producto.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.ProductoDto", "rp": "Pedidos.Aplicacion_ProductoDto.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Aplicacion.Dto.ProductoResponseDto", "rp": "Pedidos.Aplicacion_ProductoResponseDto.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.ProductoDto", "rp": "Pedidos.Aplicacion_ProductoDto.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Aplicacion.Dto.ProductoResponseDto", "rp": "Pedidos.Aplicacion_ProductoResponseDto.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Mapeadores.DetallePedidoMapeador", "rp": "Pedidos.Aplicacion_DetallePedidoMapeador.html", "cl": 25, "ucl": 0, "cal": 25, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Aplicacion.Mapeadores.PedidoMapeador", "rp": "Pedidos.Aplicacion_PedidoMapeador.html", "cl": 42, "ucl": 0, "cal": 42, "tl": 55, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "Pedidos.Dominio",
     "classes": [
-      { "name": "Pedidos.Dominio.Entidades.DetallePedido", "rp": "Pedidos.Dominio_DetallePedido.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 39, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Entidades.DetallePedido", "rp": "Pedidos.Dominio_DetallePedido.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 39, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Dominio.Entidades.EntidadBase", "rp": "Pedidos.Dominio_EntidadBase.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Dominio.Entidades.Pedido", "rp": "Pedidos.Dominio_Pedido.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ActualizarIdPedido", "rp": "Pedidos.Dominio_ActualizarIdPedido.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 24, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.CrearDetallePedido", "rp": "Pedidos.Dominio_CrearDetallePedido.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 55, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.EliminarDetallePedido", "rp": "Pedidos.Dominio_EliminarDetallePedido.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ObtenerDetallePedido", "rp": "Pedidos.Dominio_ObtenerDetallePedido.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 27, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ObtenerDetallePedidoUsuario", "rp": "Pedidos.Dominio_ObtenerDetallePedidoUsuario.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 27, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ActualizarIdPedido", "rp": "Pedidos.Dominio_ActualizarIdPedido.html", "cl": 9, "ucl": 2, "cal": 11, "tl": 24, "cb": 2, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.CrearDetallePedido", "rp": "Pedidos.Dominio_CrearDetallePedido.html", "cl": 19, "ucl": 12, "cal": 31, "tl": 55, "cb": 6, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.EliminarDetallePedido", "rp": "Pedidos.Dominio_EliminarDetallePedido.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ObtenerDetallePedido", "rp": "Pedidos.Dominio_ObtenerDetallePedido.html", "cl": 6, "ucl": 6, "cal": 12, "tl": 27, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Dominio.Servicios.DetallePedidos.ObtenerDetallePedidoUsuario", "rp": "Pedidos.Dominio_ObtenerDetallePedidoUsuario.html", "cl": 8, "ucl": 4, "cal": 12, "tl": 27, "cb": 2, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Dominio.Servicios.Pedidos.ActualizarPedido", "rp": "Pedidos.Dominio_ActualizarPedido.html", "cl": 18, "ucl": 2, "cal": 20, "tl": 34, "cb": 7, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Dominio.Servicios.Pedidos.CrearPedido", "rp": "Pedidos.Dominio_CrearPedido.html", "cl": 19, "ucl": 2, "cal": 21, "tl": 38, "cb": 6, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Dominio.Servicios.Pedidos.ListadoPedidosPorCliente", "rp": "Pedidos.Dominio_ListadoPedidosPorCliente.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -259,19 +259,19 @@ var assemblies = [
   {
     "name": "Pedidos.Infraestructura",
     "classes": [
-      { "name": "Pedidos.Infraestructura.Repositorios.DetallePedidos.DetallePedidoRepositorio", "rp": "Pedidos.Infraestructura_DetallePedidoRepositorio.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 41, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Infraestructura.Repositorios.DetallePedidos.DetallesPedidoDBContext", "rp": "Pedidos.Infraestructura_DetallesPedidoDBContext.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Infraestructura.Repositorios.DetallePedidos.DetallePedidoRepositorio", "rp": "Pedidos.Infraestructura_DetallePedidoRepositorio.html", "cl": 19, "ucl": 0, "cal": 19, "tl": 41, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Infraestructura.Repositorios.DetallePedidos.DetallesPedidoDBContext", "rp": "Pedidos.Infraestructura_DetallesPedidoDBContext.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Infraestructura.Repositorios.Pedidos.PedidoRepositorio", "rp": "Pedidos.Infraestructura_PedidoRepositorio.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 47, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Infraestructura.Repositorios.Pedidos.PedidosDBContext", "rp": "Pedidos.Infraestructura_PedidosDBContext.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos.RepositorioBaseDetallePedido<T>", "rp": "Pedidos.Infraestructura_RepositorioBaseDetallePedido_1.html", "cl": 0, "ucl": 96, "cal": 96, "tl": 140, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos.RepositorioBaseDetallePedido<T>", "rp": "Pedidos.Infraestructura_RepositorioBaseDetallePedido_1.html", "cl": 70, "ucl": 26, "cal": 96, "tl": 140, "cb": 9, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Pedidos.Infraestructura.RepositoriosGenericos.Pedidos.RepositorioBasePedido<T>", "rp": "Pedidos.Infraestructura_RepositorioBasePedido_1.html", "cl": 57, "ucl": 19, "cal": 76, "tl": 109, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "ServicioPedido",
     "classes": [
-      { "name": "Program", "rp": "ServicioPedido_Program.html", "cl": 39, "ucl": 4, "cal": 43, "tl": 78, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "ServicioPedido.Controllers.DetallePedidoController", "rp": "ServicioPedido_DetallePedidoController.html", "cl": 0, "ucl": 55, "cal": 55, "tl": 132, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "ServicioPedido.Controllers.PedidoController", "rp": "ServicioPedido_PedidoController.html", "cl": 43, "ucl": 22, "cal": 65, "tl": 156, "cb": 8, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Program", "rp": "ServicioPedido_Program.html", "cl": 43, "ucl": 0, "cal": 43, "tl": 78, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "ServicioPedido.Controllers.DetallePedidoController", "rp": "ServicioPedido_DetallePedidoController.html", "cl": 38, "ucl": 17, "cal": 55, "tl": 132, "cb": 7, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "ServicioPedido.Controllers.PedidoController", "rp": "ServicioPedido_PedidoController.html", "cl": 45, "ucl": 20, "cal": 65, "tl": 156, "cb": 10, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
@@ -290,30 +290,6 @@ var riskHotspots = [
     "metrics": [
       { "value": 110, "exceeded": true },
       { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "Pedidos.Dominio", "class": "Pedidos.Dominio.Servicios.DetallePedidos.CrearDetallePedido", "reportPath": "Pedidos.Dominio_CrearDetallePedido.html", "methodName": "ValidarDetalle(Pedidos.Dominio.Entidades.DetallePedido)", "methodShortName": "ValidarDetalle(...)", "fileIndex": 0, "line": 27,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "Pedidos.Aplicacion", "class": "Pedidos.Aplicacion.Consultas.DetallePedidos.ConsultasDetallePedido", "reportPath": "Pedidos.Aplicacion_ConsultasDetallePedido.html", "methodName": "ObtenerDetallePorPedido()", "methodShortName": "ObtenerDetallePorPedido()", "fileIndex": 0, "line": 41,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "Pedidos.Aplicacion", "class": "Pedidos.Aplicacion.Consultas.DetallePedidos.ConsultasDetallePedido", "reportPath": "Pedidos.Aplicacion_ConsultasDetallePedido.html", "methodName": "ObtenerDetallePorPedidoUsuario()", "methodShortName": "ObtenerDetallePorPedidoUsuario()", "fileIndex": 0, "line": 82,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "Pedidos.Infraestructura", "class": "Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos.RepositorioBaseDetallePedido<T>", "reportPath": "Pedidos.Infraestructura_RepositorioBaseDetallePedido_1.html", "methodName": "ActualizarIdPedido()", "methodShortName": "ActualizarIdPedido()", "fileIndex": 0, "line": 36,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
     ]},
 ];
 

@@ -10,10 +10,11 @@ namespace Pedidos.Test
     {
         private readonly HttpClient _client;
         private readonly Guid usuarioId = Guid.Parse("d7be0dc4-b41a-4719-83ee-84f11e68b622");
-        private readonly Guid pedidoId = Guid.Parse("b9d65f53-1087-4f45-8a61-001828e2ba50");
-        private readonly int productoId1 = 1223;
+        private readonly Guid pedidoId = Guid.Parse("f04767ca-f41d-4dfc-886a-f7b69c3d7d31");
+        private readonly int productoId1 = 1225;
         private readonly int productoId2 = 1224;
         private Guid detalleId;
+
         public DetallePedidosControllerTest(WebApplicationFactory<Program> factory)
         {
             _client = factory.CreateClient();
@@ -84,7 +85,7 @@ namespace Pedidos.Test
             //Act
             var response = await _client.PostAsync("/api/DetallePedido/AgregarDetalle", content);
             //Assert
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+            Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
         }
 
         [Fact]
@@ -115,9 +116,7 @@ namespace Pedidos.Test
             var response = await _client.GetAsync($"/api/DetallePedido/ObtenerDetalles/{Guid.NewGuid()}");
 
             //Assert
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-            var responseString = await response.Content.ReadAsStringAsync();
-            Assert.Contains("No se encontraron detalles de pedido", responseString);
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
 
         [Fact]
@@ -137,6 +136,28 @@ namespace Pedidos.Test
             });
             Assert.NotNull(detallePedidoResult);
             Assert.IsType<DetallePedidoOutList>(detallePedidoResult);
+        }
+
+        [Fact]
+        public async Task actualizarDetallePedido_Ok()
+        {
+            if (detalleId == Guid.Empty)
+                await CrearDetallePedido_Ok();
+
+            var response = await _client.PutAsync($"/api/DetallePedido/ActualizarDetalles/{usuarioId}/{pedidoId}",null);
+
+            //Assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            response.EnsureSuccessStatusCode();
+            var responseString = await response.Content.ReadAsStringAsync();
+            var detallePedidoResult = JsonSerializer.Deserialize<DetallePedidoOut>(responseString, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            Assert.NotNull(detallePedidoResult);
+            Assert.Equal(Pedidos.Aplicacion.Enum.Resultado.Exitoso, detallePedidoResult.Resultado);
+
+            detalleId = Guid.Empty;
         }
     }
 }

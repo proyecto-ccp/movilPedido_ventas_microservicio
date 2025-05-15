@@ -3,17 +3,20 @@
   "WorkspaceRootPath": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96CCE383-95C5-4885-BB42-928515C5F42B}|..\\Pedidos.Test\\Pedidos.Test.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.test\\detallepedidoscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\serviciopedido\\controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|solutionrelative:controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\serviciopedido\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EB7882-6DB3-4868-81EB-D0BC28177A00}|ServicioPedido.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96CCE383-95C5-4885-BB42-928515C5F42B}|..\\Pedidos.Test\\Pedidos.Test.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.test\\pedidoscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\dto\\detallepedidoin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0623055-B04C-4AAF-812C-C27D5313F4BE}|..\\Pedidos.Aplicacion\\Pedidos.Aplicacion.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.aplicacion\\consultas\\pedidos\\consultaspedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96CCE383-95C5-4885-BB42-928515C5F42B}|..\\Pedidos.Test\\Pedidos.Test.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\movilpedido_ventas_microservicio\\pedidos.test\\detallepedidoscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,8 +26,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductoDto.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Dto\\ProductoDto.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Dto\\ProductoDto.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Dto\\ProductoDto.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Dto\\ProductoDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA2wAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T20:08:49.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConsultasPedidos.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Consultas\\Pedidos\\ConsultasPedidos.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Consultas\\Pedidos\\ConsultasPedidos.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Consultas\\Pedidos\\ConsultasPedidos.cs",
+              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Consultas\\Pedidos\\ConsultasPedidos.cs",
+              "ViewState": "AgIAAGUAAAAALjMzMzMLwGoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:59:52.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e3fb24c2-2e84-3146-a5f8-bc25bbc68f8a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAFsAAAAA3v////8VwGQAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:57:49.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetallePedidosControllerTest.cs",
+              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Test\\DetallePedidosControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\Pedidos.Test\\DetallePedidosControllerTest.cs",
+              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Test\\DetallePedidosControllerTest.cs",
+              "RelativeToolTip": "..\\Pedidos.Test\\DetallePedidosControllerTest.cs",
+              "ViewState": "AgIAAHcAAAAAVmZmZmYpwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:53:10.637Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -33,53 +92,10 @@
               "RelativeDocumentMoniker": "..\\Pedidos.Test\\PedidosControllerTest.cs",
               "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Test\\PedidosControllerTest.cs",
               "RelativeToolTip": "..\\Pedidos.Test\\PedidosControllerTest.cs",
-              "ViewState": "AgIAAF4AAADAm5mZmZkwwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAACANzMzMzMkwKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:39:56.098Z",
+              "WhenOpened": "2025-05-15T18:53:37.242Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DetallePedidosControllerTest.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Test\\DetallePedidosControllerTest.cs",
-              "RelativeDocumentMoniker": "..\\Pedidos.Test\\DetallePedidosControllerTest.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Test\\DetallePedidosControllerTest.cs",
-              "RelativeToolTip": "..\\Pedidos.Test\\DetallePedidosControllerTest.cs",
-              "ViewState": "AgIAAH4AAADA/f////8owIAAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:27:42.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DetallePedidoController.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\DetallePedidoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DetallePedidoController.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\ServicioPedido\\Controllers\\DetallePedidoController.cs",
-              "RelativeToolTip": "Controllers\\DetallePedidoController.cs",
-              "ViewState": "AgIAACoAAAAAYGZmZmYrwDUAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:38:49.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetallePedidoIn.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Dto\\DetallePedidoIn.cs",
-              "RelativeDocumentMoniker": "..\\Pedidos.Aplicacion\\Dto\\DetallePedidoIn.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\movilPedido_ventas_microservicio\\Pedidos.Aplicacion\\Dto\\DetallePedidoIn.cs",
-              "RelativeToolTip": "..\\Pedidos.Aplicacion\\Dto\\DetallePedidoIn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:29:47.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e3fb24c2-2e84-3146-a5f8-bc25bbc68f8a}"
             }
           ]
         }

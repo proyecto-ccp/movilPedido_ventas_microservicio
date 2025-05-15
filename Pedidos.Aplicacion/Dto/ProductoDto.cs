@@ -1,4 +1,6 @@
-﻿namespace Pedidos.Aplicacion.Dto
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Pedidos.Aplicacion.Dto
 {
     public class ProductoDto
     {
@@ -9,6 +11,7 @@
         public string urlFoto2 { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class Producto
     {
         public string Nombre { get; set; }

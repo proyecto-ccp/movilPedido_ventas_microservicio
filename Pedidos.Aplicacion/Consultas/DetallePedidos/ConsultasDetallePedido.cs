@@ -52,7 +52,7 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
                 {
                     output.Resultado = Resultado.SinRegistros;
                     output.Mensaje = "No se encontraron DetallePedidos";
-                    output.Status = HttpStatusCode.NoContent;
+                    output.Status = HttpStatusCode.NotFound;
                 }
                 else
                 {

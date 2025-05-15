@@ -42,6 +42,7 @@ namespace Pedidos.Aplicacion.Comandos.DetallePedidos
                 baseOut.Mensaje = "Detalle agregado exitosamente";
                 baseOut.Resultado = Resultado.Exitoso;
                 baseOut.Status = HttpStatusCode.Created;
+                baseOut.Id = detallepedidoDominio.Id;
             }
             catch (Exception ex)
             {

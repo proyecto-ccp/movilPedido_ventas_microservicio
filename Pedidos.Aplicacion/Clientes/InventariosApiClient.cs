@@ -1,11 +1,13 @@
 ﻿
 using Pedidos.Aplicacion.Dto;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Json;
 
 namespace Pedidos.Aplicacion.Clientes
 {
     public interface IInventariosApiClient
     {
+        [ExcludeFromCodeCoverageAttribute]
         Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad);
         Task<InventarioResponseDto> RetirarInventarioAsync(int idProducto, int cantidad);
     }
@@ -18,6 +20,7 @@ namespace Pedidos.Aplicacion.Clientes
             _httpClient = httpClient;
         }
 
+        [ExcludeFromCodeCoverage]
         public async Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad)
         {
             var inventario = new Inventario

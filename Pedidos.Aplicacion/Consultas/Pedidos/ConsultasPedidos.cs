@@ -69,7 +69,7 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
                 {
                     output.Resultado = Resultado.SinRegistros;
                     output.Mensaje = "No se encontraron pedidos para el cliente";
-                    output.Status = HttpStatusCode.NoContent;
+                    output.Status = HttpStatusCode.NotFound;
                 }
                 else
                 { 
@@ -104,7 +104,7 @@ namespace Pedidos.Aplicacion.Consultas.Pedidos
                 {
                     output.Resultado = Resultado.SinRegistros;
                     output.Mensaje = "No se encontraron pedidos para el vendedor";
-                    output.Status = HttpStatusCode.NoContent;
+                    output.Status = HttpStatusCode.NotFound;
                 }
                 else
                 {
