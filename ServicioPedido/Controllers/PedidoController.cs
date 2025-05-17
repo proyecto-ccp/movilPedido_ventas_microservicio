@@ -2,6 +2,7 @@
 using Pedidos.Aplicacion.Comandos.Pedidos;
 using Pedidos.Aplicacion.Consultas.Pedidos;
 using Pedidos.Aplicacion.Dto;
+using ServicioPedido.Helpers;
 
 namespace ServicioPedido.Controllers
 {
@@ -9,6 +10,7 @@ namespace ServicioPedido.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [Consumes("application/json")]
+    [Authorize]
     public class PedidoController : ControllerBase
     {
         private readonly IComandosPedido _comandosPedido;
@@ -142,7 +144,7 @@ namespace ServicioPedido.Controllers
             try
             {
                 var resultado = await _consultasPedidos.ObtenerPedidosPorEstado(estado);
-                if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
+                if (resultado.Resultado == Pedidos.Aplicacion.Enum.Resultado.Exitoso)
                     return Ok(resultado);
                 else
                     return Problem(resultado.Mensaje, statusCode: (int)resultado.Status, title: resultado.Resultado.ToString(), type: resultado.Resultado.ToString(), instance: HttpContext.Request.Path);

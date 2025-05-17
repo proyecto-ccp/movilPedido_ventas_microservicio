@@ -56,3 +56,4 @@ D:\Edward Romero\Documents\MISO\Proyecto Final II\movilPedido_ventas_microservic
 D:\Edward Romero\Documents\MISO\Proyecto Final II\movilPedido_ventas_microservicio\ServicioPedido\obj\Debug\net8.0\ServicioPedido.pdb
 D:\Edward Romero\Documents\MISO\Proyecto Final II\movilPedido_ventas_microservicio\ServicioPedido\obj\Debug\net8.0\ServicioPedido.genruntimeconfig.cache
 D:\Edward Romero\Documents\MISO\Proyecto Final II\movilPedido_ventas_microservicio\ServicioPedido\obj\Debug\net8.0\ref\ServicioPedido.dll
+D:\Edward Romero\Documents\MISO\Proyecto Final II\movilPedido_ventas_microservicio\ServicioPedido\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

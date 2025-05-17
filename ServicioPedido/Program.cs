@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Pedidos.Aplicacion.Clientes;
 using Pedidos.Aplicacion.Comandos.DetallePedidos;
 using Pedidos.Aplicacion.Comandos.Pedidos;
@@ -11,6 +12,8 @@ using Pedidos.Infraestructura.Repositorios.DetallePedidos;
 using Pedidos.Infraestructura.Repositorios.Pedidos;
 using Pedidos.Infraestructura.RepositoriosGenericos.DetallePedidos;
 using Pedidos.Infraestructura.RepositoriosGenericos.Pedidos;
+using ServicioPedido.Middleware;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +22,32 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type=ReferenceType.SecurityScheme,
+                        Id="Bearer"
+                    }
+                },
+            Array.Empty<string>()
+            }
+        });
+});
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //Pedidos
@@ -59,6 +87,11 @@ builder.Services.AddHttpClient<IProductosApiClient, ProductosApiClient>(client =
     client.BaseAddress = new Uri("https://productos-596275467600.us-central1.run.app/");
 });
 
+builder.Services.AddHttpClient<IUsuarioApiClient, UsuarioApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https://usuarios-596275467600.us-central1.run.app/");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -71,6 +104,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseMiddleware<AutorizadorMiddleware>();
 
 app.MapControllers();
 
