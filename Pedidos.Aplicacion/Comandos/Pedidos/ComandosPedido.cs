@@ -13,10 +13,12 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
         private readonly CrearPedido _crearPedido;
         private readonly ActualizarPedido _actualizarPedido;
         private readonly IMapper _mapper;
-        public ComandosPedido(CrearPedido crearPedido, ActualizarPedido actualizarPedido,IMapper mapper)
+        private readonly IAuditoriaApiClient _auditoriaApiClient;
+        public ComandosPedido(CrearPedido crearPedido, ActualizarPedido actualizarPedido,IMapper mapper, IAuditoriaApiClient auditoriaApiClient)
         {
             _crearPedido = crearPedido;
             _actualizarPedido = actualizarPedido;
+            _auditoriaApiClient = auditoriaApiClient;
             _mapper = mapper;
         }
 
@@ -43,7 +45,7 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
             return baseOut;
         }
 
-        public async Task<BaseOut> ActualizarPedido(PedidoActualizarIn pedido, Guid id)
+        public async Task<BaseOut> ActualizarPedido(PedidoActualizarIn pedido, Guid id, Guid userId)
         {
             BaseOut baseOut = new();
             try
@@ -51,6 +53,16 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
                 var pedidoDominio = _mapper.Map<Pedido>(pedido);
                 pedidoDominio.Id = id;
                 await _actualizarPedido.Ejecutar(pedidoDominio);
+
+                await _auditoriaApiClient.RegistrarAuditoria(new AuditoriaDto
+                {
+                    IdUsuario = userId,
+                    Accion = "Actualizar",
+                    TablaAfectada = "tbl_pedido",
+                    Idregistro = id.ToString(),
+                    Registro = pedidoDominio.ToString(),
+                });
+
                 baseOut.Mensaje = "Pedido actualizado exitosamente";
                 baseOut.Id = pedidoDominio.Id;
                 baseOut.Resultado = Resultado.Exitoso;

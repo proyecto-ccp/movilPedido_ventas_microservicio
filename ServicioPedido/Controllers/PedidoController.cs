@@ -55,7 +55,8 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _comandosPedido.ActualizarPedido(PedidoIn,id);
+                var userId = Guid.Parse(HttpContext.Items["UserId"].ToString());
+                var resultado = await _comandosPedido.ActualizarPedido(PedidoIn,id,userId);
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);
                 else

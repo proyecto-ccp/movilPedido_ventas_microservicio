@@ -92,6 +92,11 @@ builder.Services.AddHttpClient<IUsuarioApiClient, UsuarioApiClient>(client =>
     client.BaseAddress = new Uri("https://usuarios-596275467600.us-central1.run.app/");
 });
 
+builder.Services.AddHttpClient<IAuditoriaApiClient, AuditoriaApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https://servicio-auditoria-596275467600.us-central1.run.app/");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
