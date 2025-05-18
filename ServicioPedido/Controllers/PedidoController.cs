@@ -32,7 +32,8 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _comandosPedido.CrearPedido(PedidoIn);
+                var userId = Guid.Parse(HttpContext.Items["UserId"].ToString());
+                var resultado = await _comandosPedido.CrearPedido(PedidoIn, userId);
 
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);

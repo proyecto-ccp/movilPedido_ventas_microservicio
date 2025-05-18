@@ -2,6 +2,7 @@
 using Pedidos.Aplicacion.Comandos.DetallePedidos;
 using Pedidos.Aplicacion.Consultas.DetallePedidos;
 using Pedidos.Aplicacion.Dto;
+using ServicioPedido.Helpers;
 
 namespace ServicioPedido.Controllers
 {
@@ -9,6 +10,7 @@ namespace ServicioPedido.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [Consumes("application/json")]
+    [Authorize]
     public class DetallePedidoController : ControllerBase
     {
         private readonly IComandosDetallePedido _comandosDetallePedido;
@@ -28,7 +30,8 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _comandosDetallePedido.CrearDetallePedido(detallePedidoIn);
+                var userId = Guid.Parse(HttpContext.Items["UserId"].ToString());
+                var resultado = await _comandosDetallePedido.CrearDetallePedido(detallePedidoIn, userId);
 
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);
@@ -51,7 +54,8 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _comandosDetallePedido.EliminarDetallePedido(idDetalle);
+                var userId = Guid.Parse(HttpContext.Items["UserId"].ToString());
+                var resultado = await _comandosDetallePedido.EliminarDetallePedido(idDetalle, userId);
                 if (resultado.Resultado != Pedidos.Aplicacion.Enum.Resultado.Error)
                     return Ok(resultado);
                 else
@@ -73,7 +77,8 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _comandosDetallePedido.ActualizarIdPedido(idUsuario,idPedido);
+                var userId = Guid.Parse(HttpContext.Items["UserId"].ToString());
+                var resultado = await _comandosDetallePedido.ActualizarIdPedido(idUsuario,idPedido, HttpContext.Request.Headers.Authorization, userId);
                 if (resultado.Resultado == Pedidos.Aplicacion.Enum.Resultado.Exitoso)
                     return Ok(resultado);
                 else
@@ -95,7 +100,7 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _consultasDetallePedido.ObtenerDetallePorPedido(idPedido);
+                var resultado = await _consultasDetallePedido.ObtenerDetallePorPedido(idPedido, HttpContext.Request.Headers.Authorization);
                 if (resultado.Resultado == Pedidos.Aplicacion.Enum.Resultado.Exitoso)
                     return Ok(resultado);
                 else
@@ -117,7 +122,7 @@ namespace ServicioPedido.Controllers
         {
             try
             {
-                var resultado = await _consultasDetallePedido.ObtenerDetallePorPedidoUsuario(idUsuario);
+                var resultado = await _consultasDetallePedido.ObtenerDetallePorPedidoUsuario(idUsuario, HttpContext.Request.Headers.Authorization);
                 if (resultado.Resultado == Pedidos.Aplicacion.Enum.Resultado.Exitoso)
                     return Ok(resultado);
                 else

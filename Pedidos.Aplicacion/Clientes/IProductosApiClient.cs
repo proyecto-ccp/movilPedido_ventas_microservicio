@@ -6,7 +6,7 @@ namespace Pedidos.Aplicacion.Clientes
 {
     public interface IProductosApiClient
     {
-        Task<ProductoDto> ObtenerProductoPorIdAsync(int idProducto);
+        Task<ProductoDto> ObtenerProductoPorIdAsync(int idProducto, string authorization);
     }
 
     public class ProductosApiClient : IProductosApiClient
@@ -16,8 +16,10 @@ namespace Pedidos.Aplicacion.Clientes
         {
             _httpClient = httpClient;
         }
-        public async Task<ProductoDto> ObtenerProductoPorIdAsync(int idProducto)
+        public async Task<ProductoDto> ObtenerProductoPorIdAsync(int idProducto, string authorization)
         {
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"{authorization}");
             var response = await _httpClient.GetAsync($"/api/Productos/ConsultarPorId?IdProducto={idProducto}");
 
             if (!response.IsSuccessStatusCode)

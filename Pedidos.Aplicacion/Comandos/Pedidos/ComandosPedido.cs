@@ -5,6 +5,7 @@ using Pedidos.Aplicacion.Enum;
 using Pedidos.Dominio.Entidades;
 using Pedidos.Dominio.Servicios.Pedidos;
 using System.Net;
+using System.Text.Json;
 
 namespace Pedidos.Aplicacion.Comandos.Pedidos
 {
@@ -22,7 +23,7 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
             _mapper = mapper;
         }
 
-        public async Task<BaseOut> CrearPedido(PedidoIn pedido)
+        public async Task<BaseOut> CrearPedido(PedidoIn pedido, Guid userId)
         {
             BaseOut baseOut = new();
 
@@ -30,6 +31,16 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
             {
                 var pedidoDominio = _mapper.Map<Pedido>(pedido);
                 await _crearPedido.Ejecutar(pedidoDominio);
+
+                _ = Task.Run(() => _auditoriaApiClient.RegistrarAuditoria(new AuditoriaDto
+                {
+                    IdUsuario = userId,
+                    Accion = "Crear Pedido",
+                    TablaAfectada = "tbl_pedido",
+                    Idregistro = pedidoDominio.Id.ToString(),
+                    Registro = JsonSerializer.Serialize(pedidoDominio),
+                }));
+
                 baseOut.Mensaje = "Pedido creado exitosamente";
                 baseOut.Id = pedidoDominio.Id;
                 baseOut.Resultado = Resultado.Exitoso;
@@ -54,14 +65,14 @@ namespace Pedidos.Aplicacion.Comandos.Pedidos
                 pedidoDominio.Id = id;
                 await _actualizarPedido.Ejecutar(pedidoDominio);
 
-                await _auditoriaApiClient.RegistrarAuditoria(new AuditoriaDto
+                _ = Task.Run(() => _auditoriaApiClient.RegistrarAuditoria(new AuditoriaDto
                 {
                     IdUsuario = userId,
-                    Accion = "Actualizar",
+                    Accion = "Actualizar Pedido",
                     TablaAfectada = "tbl_pedido",
                     Idregistro = id.ToString(),
-                    Registro = pedidoDominio.ToString(),
-                });
+                    Registro = JsonSerializer.Serialize(pedidoDominio),
+                }));
 
                 baseOut.Mensaje = "Pedido actualizado exitosamente";
                 baseOut.Id = pedidoDominio.Id;

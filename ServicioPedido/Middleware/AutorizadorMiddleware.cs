@@ -46,7 +46,7 @@ namespace ServicioPedido.Middleware
 
                 if (resultado.Status == (int)System.Net.HttpStatusCode.OK) 
                 { 
-                    usuarioToken = resultado.UserName;   
+                    usuarioToken = resultado.IdUsuario;   
                 }
             }
             catch 

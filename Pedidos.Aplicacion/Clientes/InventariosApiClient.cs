@@ -1,6 +1,7 @@
 ﻿
 using Pedidos.Aplicacion.Dto;
 using System.Diagnostics.CodeAnalysis;
+using System.Net;
 using System.Net.Http.Json;
 
 namespace Pedidos.Aplicacion.Clientes
@@ -8,8 +9,8 @@ namespace Pedidos.Aplicacion.Clientes
     public interface IInventariosApiClient
     {
         [ExcludeFromCodeCoverageAttribute]
-        Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad);
-        Task<InventarioResponseDto> RetirarInventarioAsync(int idProducto, int cantidad);
+        Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad, string authorization);
+        Task<InventarioResponseDto> RetirarInventarioAsync(int idProducto, int cantidad, string authorization);
     }
     public class InventariosApiClient : IInventariosApiClient
     {
@@ -21,7 +22,7 @@ namespace Pedidos.Aplicacion.Clientes
         }
 
         [ExcludeFromCodeCoverage]
-        public async Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad)
+        public async Task<InventarioResponseDto> AgregarInventarioAsync(int idProducto, int cantidad, string authorization)
         {
             var inventario = new Inventario
             {
@@ -29,6 +30,8 @@ namespace Pedidos.Aplicacion.Clientes
                 CantidadStock = cantidad
             };
 
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"{authorization}");
             var response = await _httpClient.PostAsJsonAsync("/api/Inventarios/Agregar", inventario);
 
             if (response.IsSuccessStatusCode)
@@ -41,7 +44,7 @@ namespace Pedidos.Aplicacion.Clientes
                 throw new Exception($"Error al agregar inventario: {errorResponse.Mensaje}");
             }
         }
-        public async Task<InventarioResponseDto> RetirarInventarioAsync(int idProducto, int cantidad)
+        public async Task<InventarioResponseDto> RetirarInventarioAsync(int idProducto, int cantidad, string authorization)
         {
             var inventario = new Inventario
             {
@@ -49,6 +52,8 @@ namespace Pedidos.Aplicacion.Clientes
                 CantidadStock = cantidad
             };
 
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"{authorization}");
             var response = await _httpClient.PostAsJsonAsync("/api/Inventarios/Retirar", inventario);
 
             if (response.IsSuccessStatusCode)

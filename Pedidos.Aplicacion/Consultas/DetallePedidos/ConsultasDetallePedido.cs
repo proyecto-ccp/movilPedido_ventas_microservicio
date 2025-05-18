@@ -23,11 +23,11 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
             _mapper = mapper;
         }
 
-        private void DiligenciarProducto(DetallePedido detalle)
+        private void DiligenciarProducto(DetallePedido detalle, string authorization)
         {
             if (detalle.IdProducto != null && detalle.IdProducto > 0)
             {
-                var producto = _productosApiClient.ObtenerProductoPorIdAsync(detalle.IdProducto).Result;
+                var producto = _productosApiClient.ObtenerProductoPorIdAsync(detalle.IdProducto, authorization).Result;
                 if (producto != null)
                 {
                     detalle.NombreProducto = producto.Nombre;
@@ -37,7 +37,7 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
             }
         }
 
-        public async Task<DetallePedidoOutList> ObtenerDetallePorPedido(Guid idPedido)
+        public async Task<DetallePedidoOutList> ObtenerDetallePorPedido(Guid idPedido, string authorization)
         {
             DetallePedidoOutList output = new()
             {
@@ -58,7 +58,7 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
                 {
                     foreach(var detallePedido in DetallesPedido)
                     {
-                        DiligenciarProducto(detallePedido);
+                        DiligenciarProducto(detallePedido, authorization);
                     }
 
                     output.Resultado = Resultado.Exitoso;
@@ -78,7 +78,7 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
         }
 
 
-        public async Task<DetallePedidoOutList> ObtenerDetallePorPedidoUsuario(Guid idUsuario)
+        public async Task<DetallePedidoOutList> ObtenerDetallePorPedidoUsuario(Guid idUsuario, string authorization)
         {
             DetallePedidoOutList output = new()
             {
@@ -99,7 +99,7 @@ namespace Pedidos.Aplicacion.Consultas.DetallePedidos
                 {
                     foreach (var detallePedido in DetallesPedido)
                     {
-                        DiligenciarProducto(detallePedido);
+                        DiligenciarProducto(detallePedido, authorization);
                     }
 
                     output.Resultado = Resultado.Exitoso;
