@@ -17,6 +17,17 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -106,8 +117,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 /*}*/
 
+app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 app.UseMiddleware<AutorizadorMiddleware>();
 
