@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
+using Pedidos.Aplicacion.Clientes;
 using Pedidos.Aplicacion.Dto;
 using System.Net;
 using System.Text;
@@ -14,10 +15,14 @@ namespace Pedidos.Test
         private readonly int productoId1 = 1225;
         private readonly int productoId2 = 1224;
         private Guid detalleId;
+        private string token = string.Empty;
 
         public DetallePedidosControllerTest(WebApplicationFactory<Program> factory)
         {
             _client = factory.CreateClient();
+            IUsuarioApiClient _usuarioApiClient = new UsuarioApiClient(_client);
+            token = _usuarioApiClient.Login().Result;
+            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         }
 
         [Fact]

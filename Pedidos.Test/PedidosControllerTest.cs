@@ -1,6 +1,8 @@
 using Bogus;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
+using Newtonsoft.Json.Linq;
+using Pedidos.Aplicacion.Clientes;
 using Pedidos.Aplicacion.Dto;
 using System.Net;
 using System.Text;
@@ -14,9 +16,13 @@ namespace Pedidos.Test
         private readonly Guid clienteId = Guid.Parse("d7be0dc4-b41a-4719-83ee-84f11e68b622");
         private readonly Guid vendedorId = Guid.Parse("b07e8ab8-b787-4f6d-8a85-6c506a3616f5");
         private Guid pedidoId;
+        private string token = string.Empty;
         public PedidosControllerTest(WebApplicationFactory<Program> factory)
         {
             _client = factory.CreateClient();
+            IUsuarioApiClient _usuarioApiClient = new UsuarioApiClient(_client);
+            token = _usuarioApiClient.Login().Result;
+            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         }
 
         [Fact]
